@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.juanma" name="Manilovic" version="3.1.0" provider-name="Manilovic">
+	<requires>
+		<import addon="script.module.horus" />
+		<import addon="script.module.six" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="main.py">         
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<description>Addon de Manilovic</description>
+		<disclaimer>Enlaces a Canales</disclaimer>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/therocklogo.jpg</icon>
+			<fanart>resources/therocklogo.jpg</fanart>
+		</assets>
+		<news>
+			-Special Protocol
+			-Plataformas ANDROID ARM X86
+			-Limpiar cache
+		</news>
+	</extension>
+</addon>
+
