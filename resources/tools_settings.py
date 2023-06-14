@@ -7,6 +7,7 @@ import platform
 import urllib.request
 import re
 import json
+import shutil
 
 from resources.tools import *
 
