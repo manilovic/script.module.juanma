@@ -49,6 +49,23 @@ if str(sys.argv[2]) == '?todos_links_setting':
 
 debug("JM  Sistema es " + sistema())
 
+pathTV = '/storage/emulated/0/org.acestream.engine/.ACEStream/'
+pathPHONE = '/storage/emulated/0/Android/data/org.acestream.media.atv/files/.ACEStream/'
+path = '/usr/local/bin/'
+
+isExist = os.path.exists(path)
+notificacion(isExist)
+debug(str(isExist))
+
+isExist = os.path.exists(pathTV)
+notificacion(isExist)
+debug(str(isExist))
+
+isExist = os.path.exists(pathPHONE)
+notificacion(isExist)
+debug(str(isExist))
+
+#
 
 def build_url(query):
 
