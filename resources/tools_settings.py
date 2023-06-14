@@ -62,8 +62,6 @@ def limpiar_cache_setting():
             notificacion("Limpiando cache")
             shutil.rmtree(pathPHONE, ignore_errors=True)
             debug("JM  caché borrado")
-         else
-            pass
             
     elif sistema() == "Ubuntu":
         notificacion("Limpiando caché")
@@ -71,13 +69,15 @@ def limpiar_cache_setting():
         comando = "find  /home/*/snap/acestreamplayer/??/.ACEStream/.acestream_cache/* -maxdepth 1 -mmin +120 -delete"
         subprocess.run(comando, shell=True)
         debug("JM  caché borrado")
-
-    else sistema() == "arm":    ###############provisional ruta ARM
+        
+    elif sistema() == "arm": 
         comando = xbmcvfs.translatePath("special://home/userdata/addon_data/script.module.horus/acestream.engine/????????????")
         subprocess.run(comando, shell=True)
         notificacion("Limpiando cache")
-        debug("JM  Limpiando caché")
-    
+        debug("JM  Limpiando caché")    ###############provisional ruta ARM
+    else:
+        pass
+        
     notificacion("Caché limpiado")
     return(debug("JM  Caché limpiado"))
 
