@@ -57,11 +57,13 @@ def limpiar_cache_setting():
             notificacion("Limpiando cache")
             shutil.rmtree(pathTV, ignore_errors=True)
             debug("JM  caché borrado")
-        else str(ruta_PHONE) == "True":
+        elif str(ruta_PHONE) == "True":
             debug("JM  caché TV es "+ str(ruta_PHONE))     
             notificacion("Limpiando cache")
             shutil.rmtree(pathPHONE, ignore_errors=True)
             debug("JM  caché borrado")
+         else
+            pass
             
     elif sistema() == "Ubuntu":
         notificacion("Limpiando caché")
