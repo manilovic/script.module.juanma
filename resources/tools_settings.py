@@ -46,22 +46,36 @@ def parar_setting_acestream():
 def limpiar_cache_setting():
         
     if "ANDROID_STORAGE" in os.environ:
-        SO = "android"
-        exit(0)
+        pathTV = '/storage/emulated/0/org.acestream.engine/.ACEStream/.acestream_cache/'
+        pathPHONE = '/storage/emulated/0/Android/data/org.acestream.media.atv/files/.ACEStream/.acestream_cache/'
+        
+        ruta_TV = os.path.exists(pathTV)
+        ruta_PHONE = os.path.exists(pathPHONE)
+                
+        if str(ruta_TV) == "True":
+            debug("JM  caché TV es "+ str(ruta_TV))     
+            notificacion("Limpiando cache")
+            shutil.rmtree(pathTV, ignore_errors=True)
+            debug("JM  caché borrado")
+        else str(ruta_PHONE) == "True":
+            debug("JM  caché TV es "+ str(ruta_PHONE))     
+            notificacion("Limpiando cache")
+            shutil.rmtree(pathPHONE, ignore_errors=True)
+            debug("JM  caché borrado")
+            
+    elif sistema() == "Ubuntu":
+        notificacion("Limpiando caché")
+        debug("JM  Limpiando caché")
+        comando = "find  /home/*/snap/acestreamplayer/??/.ACEStream/.acestream_cache/* -maxdepth 1 -mmin +120 -delete"
+        subprocess.run(comando, shell=True)
+        debug("JM  caché borrado")
 
-    if sistema() == "Ubuntu":
-        comando = "find  /home/minipc/snap/acestreamplayer/??/.ACEStream/.acestream_cache/* -maxdepth 1 -mmin +120"
+    else sistema() == "arm":    ###############provisional ruta ARM
+        comando = xbmcvfs.translatePath("special://home/userdata/addon_data/script.module.horus/acestream.engine/????????????")
         subprocess.run(comando, shell=True)
         notificacion("Limpiando cache")
         debug("JM  Limpiando caché")
-    elif sistema() == "arm":
-        comando = "find  /home/minipc/snap/acestreamplayer/??/.ACEStream/.acestream_cache/* -maxdepth 1 -mmin +120"
-        subprocess.run(comando, shell=True)
-        notificacion("Limpiando cache")
-        debug("JM  Limpiando caché")
-    else:
-        pass
-
+    
     notificacion("Caché limpiado")
     return(debug("JM  Caché limpiado"))
 

@@ -9,7 +9,6 @@ import subprocess
 import json
 import urllib.request
 import urllib.parse
-import shutil
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
 from urllib.parse import urlencode
@@ -46,26 +45,6 @@ if str(sys.argv[2]) == '?todos_links_setting':
 # Indentificar Sistema
 
 debug("JM  Sistema es " + sistema())
-
-pathTV = '/storage/emulated/0/org.acestream.engine/.ACEStream/'
-pathPHONE = '/storage/emulated/0/Android/data/org.acestream.media.atv/files/.ACEStream/'
-
-
-isExist = os.path.exists(pathTV)
-notificacion(isExist)
-debug("JM  isExist TV es "+ str(isExist))
-if str(isExist) == "True":
-    debug("JM  borrar")
-    shutil.rmtree(pathTV, ignore_errors=True)
-    debug("JM  borrado")
-
-isExist = os.path.exists(pathPHONE)
-notificacion(isExist)
-debug("JM  isExist PHONE es "+ str(isExist))
-if str(isExist) == "True":
-    debug("JM  borrar")
-    shutil.rmtree(pathPHONE, ignore_errors=True)
-    debug("JM  borrado")
 
 
 #########
@@ -126,7 +105,7 @@ else:
     link = args.get('link', None)
     url = link[0]
 
-    ### Android
+    ### Android API
 
     if sistema() == "android":  
         debug("JM  sistema android canal")
