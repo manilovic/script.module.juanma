@@ -94,7 +94,7 @@ def actualizar_links_setting():
     response = urllib.request.urlopen("https://hackmd.io/@DEPORTES/AP-ID")
     html = response.read().decode('utf-8')
 
-    canales = ["DAZN LaLiga 1080p","DAZN LaLiga 2","M. LaLiga 1080p","M. LaLiga 2 ","M.L. Campeones 1080p","M.L. Campeones 2","M. Deportes 1080p","DAZN 1", "DAZN 2","DAZN F1 1080p","M. Golf 1080p"]
+    canales = ["DAZN LaLiga 1080p","DAZN LaLiga 2","M. LaLiga 1080p","M. LaLiga 2 ","M.L. Campeones 1080p","M.L. Campeones 2","M. Deportes 1080p","DAZN 1", "DAZN 2","DAZN F1 1080p","DAZN F1 Multicam 1080p","M. Golf 1080p"]
 
     for x in canales:
 
