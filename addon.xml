@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.juanma" name="Manilovic" version="3.2.5" provider-name="Manilovic">
+<addon id="script.module.juanma" name="Manilovic" version="3.3.0" provider-name="Manilovic">
 	<requires>
 		<import addon="script.module.horus" />
 		<import addon="script.module.six" />
