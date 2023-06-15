@@ -5,8 +5,8 @@
 	<setting label="Actualizar links" type="action"  action="RunPlugin(plugin://script.module.juanma?actualizar_links)" option="close"/>
 	<setting label="Actualizar Lista Completa" type="action"  action="RunPlugin(plugin://script.module.juanma?todos_links_setting)" option="close"/>
 	<setting id="clear_cache_acestream" label="Limpiar caché Acestream" type="action"  action="RunPlugin(plugin://script.module.juanma?limpiar_cache)" option="close"/>	
-	<setting id="stop_acestream_2" label="Parada Forzosa Acestream AHORA" type="action"  action="RunPlugin(plugin://script.module.juanma?parar_acestream_2)" option="close"/>
-	<setting id="stop_acestream" type="bool" label="Parar Acestream automaticamente" default="true" visible="!System.Platform.Android"/>
+	<setting id="stop_acestream_2" label="Parada Forzosa Acestream AHORA" type="action"  action="RunPlugin(plugin://script.module.juanma?parar_acestream_2)"  visible="!System.Platform.Android" option="close"/>
+	<setting id="stop_acestream" type="bool" label="Parar Acestream automaticamente" default="true" visible="!System.Platform.Android" option="close"/>
 	<setting label="Horus install acestream" type="action"  action="RunPlugin(plugin://script.module.horus?action=install_acestream)" visible="!System.Platform.Android" option="close"/>
     </category>
 </settings>
