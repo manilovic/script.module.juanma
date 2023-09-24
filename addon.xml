@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.juanma" name="Manilovic" version="3.6.5" provider-name="Manilovic">
+<addon id="script.module.juanma" name="Manilovic" version="3.7" provider-name="Manilovic">
 	<requires>
 		<import addon="script.module.horus" />
 		<import addon="script.module.six" />
@@ -19,6 +19,7 @@
 			-Special Protocol
 			-Plataformas ANDROID ARM X86
 			-Limpiar cache
+			-Nueva URL
 		</news>
 	</extension>
 </addon>
