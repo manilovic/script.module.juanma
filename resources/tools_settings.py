@@ -91,7 +91,7 @@ def actualizar_links_setting():
     ruta_ids = xbmcvfs.translatePath("special://home/addons/script.module.juanma/resources/ids.json")
     file_ids = open(ruta_ids, mode='w')
 
-    response = urllib.request.urlopen("https://hackmd.io/@ELPLAN/PRIMER-TIEMPO")
+    response = urllib.request.urlopen("https://hackmd.io/@w8tAmGnzT-qbgHkemaly6A/SEGUNDA-PARTE")
     html = response.read().decode('utf-8')
 
     canales = ["DAZN LaLiga 1080p","M. LaLiga TV 1080p","LaLiga Hypermotion 1080p","M.L. Campeones 1080p","M.L. Campeones 2 1080p","M. Deportes 1080p","DAZN 1 1080p", "DAZN 2 1080p","DAZN F1 1080p","DAZN F1 Multicam 1080p","M. Golf 1080p"]
@@ -130,7 +130,7 @@ def todos_links_setting():
     ruta_ids = xbmcvfs.translatePath("special://home/addons/script.module.juanma/resources/ids.json")
     file_ids = open(ruta_ids, mode='w')
 
-    response = urllib.request.urlopen("https://hackmd.io/@ELPLAN/PRIMER-TIEMPO")
+    response = urllib.request.urlopen("https://hackmd.io/@w8tAmGnzT-qbgHkemaly6A/SEGUNDA-PARTE")
     html = response.read().decode('utf-8')
 
 
